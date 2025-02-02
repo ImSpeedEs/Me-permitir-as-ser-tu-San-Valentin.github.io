@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>¿Me permitirías ser tu San Valentín?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://i.ibb.co/mrhTCbR4/fondooo.png') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .gif {
+            margin-bottom: 20px;
+            width: 180px;
+            height: auto;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(255, 77, 77, 0.3);
+        }
+
+        .yes:hover {
+            background-color: #e60000;
+        }
+
+        .no {
+            background-color: #ccc;
+            color: black;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .no:hover {
+            background-color: #999;
+        }
+
+        audio {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-size: cover;
+            }
+
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .gif {
+                width: 150px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="gif" src="https://i.pinimg.com/originals/52/4d/2b/524d2bd1f11e766b0f9e2f34575bbb39.gif" alt="Gif animado de corazones">
+        <h1>¿Me permitirías ser tu San Valentín?</h1>
+        <p>Me encantaría hacer de este día un recuerdo inolvidable para ti. Prometo llenarlo de amor, sonrisas y momentos especiales que reflejen cuánto significas para mí. Quiero ser quien te haga feliz hoy y siempre.</p>
+        <div class="buttons">
+            <button class="yes" onclick="aceptar()">Sí 💕</button>
+            <button class="no" onclick="rechazar()">No 😢</button>
+        </div>
+    </div>
+
+    <audio controls>
+        <source src="https://store-screenapp-production.storage.googleapis.com/vid/679ee91970569075a4fa46a6/a75ffc58-4fb5-4fe0-9d04-446022562a63.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1EINEQV5X2QGY62PSZMBMUR7IGGVLKNDB6ABP5GL6O6FKO76DWA2IE3SB%2F20250202%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250202T034011Z&X-Amz-Expires=604800&X-Amz-Signature=a4fe2c915a20add9d8942a4db4c46440d88842ca89daf44d46d1ab2dafc7b412&X-Amz-SignedHeaders=host&response-content-type=attachment%3B%20filename%3D%22a75ffc58-4fb5-4fe0-9d04-446022562a63.mp3%22%3B%20filename%2A%3D%20UTF-8%27%27wwd.mp3juice.blog%2520_%2520Elliot%2520James%2520Reay%2520_%2520I%2520Think%2520They%2520Call%2520This%2520Love%2520Lyrics%2520all%2520i%2520dream%2520of%2520is%2520your%2520eyes.mp3.mp3%3B#t=0," type="audio/mp3">
+        Tu navegador no soporta la reproducción de música.
+    </audio>
+
+    <script>
+        function aceptar() {
+            document.querySelector('.container').innerHTML = `
+                <img src="https://i.ibb.co/27B6wHKr/311dbca8-3085-438a-aaff-fbd01ef13af5.jpg" alt="Imagen especial" style="width: 100%; border-radius: 20px; margin-bottom: 20px;">
+                <h1>¡Sabía que dirías que sí! 💖</h1>
+                <p>Nos vemos en nuestra cita especial. 🥰</p>
+            `;
+        }
+
+        function rechazar() {
+            document.querySelector('.container').innerHTML = `
+                <img src="https://i.ibb.co/xhXFK5L/triste.jpg" alt="Imagen triste" style="width: 100%; border-radius: 20px; margin-bottom: 20px;">
+                <h1>Oh no... 😢</h1>
+                <p>Quizá en otra ocasión... 💔</p>
+            `;
+        }
+    </script>
+</body>
+</html>
